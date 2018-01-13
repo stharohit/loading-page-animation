@@ -1,0 +1,70 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+.loading-page{
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background: #242d3d;
+}
+
+.loading-bar  {
+  background: white;
+  height: 12px;
+  width: 100%;
+}
+
+.loading-bar-progress{
+  background: red;
+  height: 12px;
+  width: 5px;
+  -webkit-animation-name: progress; /* for safari*/
+  -webkit-animation-duration: 3.5s;
+  animation-name: progress;
+  animation-duration: 3.5s;
+  animation-fill-mode: forwards;
+}
+
+.loading-text{
+  text-align: center;
+  margin-top: 300px;
+  margin-bottom: 0;
+  color: white;
+  -webkit-animation-name: text-blink; /* for safari */
+  -webkit-animation-duration: 4s;
+  animation-name: text-blink;
+  animation-duration: 4s;
+}
+
+@-webkit-keyframes progress {
+  /* for safari */
+  0%{width: 5px;}
+  50%{width: 700px;}
+  75%{width: 700px;}
+  100%{width: 1500px;}
+}
+
+@keyframes progress{
+  0%{width: 5px;}
+  50%{width: 700px;}
+  75%{width: 700px;}
+  100%{width: 1500px;}
+}
+
+@-webkit-keyframes text-blink {
+  /* for safari */
+  0%{opacity: 1;}
+  25%{opacity: 0;}
+  50%{opacity: 1;}
+  75%{opacity: 0;}
+  100%{opacity: 1;}
+}
+
+@keyframes text-blink{
+  0%{opacity: 1;}
+  25%{opacity: 0;}
+  50%{opacity: 1;}
+  75%{opacity: 0;}
+  100%{opacity: 1;}
+}

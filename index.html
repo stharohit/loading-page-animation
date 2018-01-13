@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="loader.css">
+  </head>
+  <script>
+    (function () {
+      var i = 1
+      var changeLoadingText = setInterval(function () {
+        var loadingText = document.getElementById('loading-text');
+        var loadingPage = document.getElementById('loading-page');
+          i++;
+          if (i===2) {
+            loadingText.innerHTML = "Fetching Question...";
+          }
+          if (i===4) {
+            loadingText.innerHTML = "Question Loaded...";
+          }
+          if (i===5) {
+            document.body.removeChild(loadingPage);
+            clearInterval("loadingText");
+          }
+      },1200);
+    })();
+  </script>
+  <body>
+
+    <div class="loading-page" id="loading-page">
+      <h1 class="loading-text" id="loading-text">Sending Request...</h1>
+      <div class="loading-bar">
+        <div class="loading-bar-progress" id="loading-bar-progress">
+        </div>
+      </div>
+    </div>
+
+
+  </body>
+</html>
